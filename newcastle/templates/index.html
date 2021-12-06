@@ -1,0 +1,395 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"  href= "{% static 'uktis/css/style.css' %}">
+  <title>UK Teratology Information Service</title>
+</head>
+
+<body>
+  <section class="hero_image">
+    <header>
+      <div class="parent">
+        <nav class="navigation">
+<!---------------------------- Logos in the hero section ---------------------------------------------->
+          <div class="uktis_logo_white">
+            <a href="#"><img src= "{% static 'uktis/images/uktis_white.svg' %}" alt="UKTIS logo white"></a>
+          </div>
+          <div class="short_logo">
+            <a href="#"><img src= "{% static 'uktis/images/ukTIS_coloured_image.svg' %}" alt="UKTIS logo"></a>
+          </div>
+          <div class="mobile_cheveron">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()"><svg class="cheveron" width="14px" height="10px" viewBox="0 0 14 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                  d="M9.43378195,9.9121 C9.49744098,9.9664 9.5853678,10 9.68243902,10 C9.87693317,10 10.0341463,9.8659 10.0341463,9.7 C10.0341463,9.6172 9.99475512,9.5422 9.9310961,9.4879 L3.83600829,4 L9.9310961,-1.4879 C9.99475512,-1.5425 10.0341463,-1.6175 10.0341463,-1.7 C10.0341463,-1.8659 9.87693317,-2 9.68243902,-2 C9.5853678,-2 9.49744098,-1.9667 9.43378195,-1.9121 L3.10305024,3.7879 C3.03939122,3.8422 3,3.9172 3,4 C3,4.0828 3.03939122,4.1575 3.10305024,4.2121 L9.43378195,9.9121 Z"
+                  transform="translate(6.517073, 4.000000) scale(1, -1) rotate(90.000000) translate(-6.517073, -4.000000) "></path>
+              </svg></span>
+          </div>
+
+
+<!------------------------------- Dropdown links from the banner ---------------------------------------->
+          <div id="myNav" class="dropdown_links">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times</a>
+            <ul class="links">
+
+              <li class="link_lynch"><a href="#">About Us<svg class="cheveron" width="14px" height="10px" viewBox="0 0 14 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                      d="M9.43378195,9.9121 C9.49744098,9.9664 9.5853678,10 9.68243902,10 C9.87693317,10 10.0341463,9.8659 10.0341463,9.7 C10.0341463,9.6172 9.99475512,9.5422 9.9310961,9.4879 L3.83600829,4 L9.9310961,-1.4879 C9.99475512,-1.5425 10.0341463,-1.6175 10.0341463,-1.7 C10.0341463,-1.8659 9.87693317,-2 9.68243902,-2 C9.5853678,-2 9.49744098,-1.9667 9.43378195,-1.9121 L3.10305024,3.7879 C3.03939122,3.8422 3,3.9172 3,4 C3,4.0828 3.03939122,4.1575 3.10305024,4.2121 L9.43378195,9.9121 Z"
+                      transform="translate(6.517073, 4.000000) scale(1, -1) rotate(90.000000) translate(-6.517073, -4.000000) "></path>
+                  </svg>
+                </a>
+
+                <ul class="dropdown lynch">
+                  <li><a href="http://www.uktis.org/html/about_us.html">UKTIS group</a></li>
+                  <li><a href="http://www.uktis.org/html/mission_statement.html">Mission Statement</a></li>
+                  <li><a href="http://www.uktis.org/html/who_uses.html">Who Uses the Service</a></li>
+                  <li><a href="http://www.uktis.org/html/funding.html">Funding</a></li>
+                  <li><a href="http://www.uktis.org/html/history.html">History of UKTIS</a></li>
+                  <li><a href="http://www.uktis.org/html/uktis_team.html">Meet the Team</a></li>
+                  <li><a href="http://www.uktis.org/html/user_feedback.html">User Feedback</a></li>
+                </ul>
+              </li>
+
+
+
+              <li class="link_cancer"><a href="#">Research<svg class="cheveron" width="14px" height="10px" viewBox="0 0 14 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                      d="M9.43378195,9.9121 C9.49744098,9.9664 9.5853678,10 9.68243902,10 C9.87693317,10 10.0341463,9.8659 10.0341463,9.7 C10.0341463,9.6172 9.99475512,9.5422 9.9310961,9.4879 L3.83600829,4 L9.9310961,-1.4879 C9.99475512,-1.5425 10.0341463,-1.6175 10.0341463,-1.7 C10.0341463,-1.8659 9.87693317,-2 9.68243902,-2 C9.5853678,-2 9.49744098,-1.9667 9.43378195,-1.9121 L3.10305024,3.7879 C3.03939122,3.8422 3,3.9172 3,4 C3,4.0828 3.03939122,4.1575 3.10305024,4.2121 L9.43378195,9.9121 Z"
+                      transform="translate(6.517073, 4.000000) scale(1, -1) rotate(90.000000) translate(-6.517073, -4.000000) "></path>
+                  </svg>
+                </a>
+                <ul class="dropdown cancer">
+                  <li><a href="http://www.uktis.org/html/current_uktis_research.html">Current</a></li>
+                  <li><a href="http://www.uktis.org/html/h1n1v_influenza_in_pregnancy.html">Previous</a></li>
+                </ul>
+              </li>
+
+              <li class="link_action"><a href="#">Surveillance<svg class="cheveron" width="14px" height="10px" viewBox="0 0 14 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                      d="M9.43378195,9.9121 C9.49744098,9.9664 9.5853678,10 9.68243902,10 C9.87693317,10 10.0341463,9.8659 10.0341463,9.7 C10.0341463,9.6172 9.99475512,9.5422 9.9310961,9.4879 L3.83600829,4 L9.9310961,-1.4879 C9.99475512,-1.5425 10.0341463,-1.6175 10.0341463,-1.7 C10.0341463,-1.8659 9.87693317,-2 9.68243902,-2 C9.5853678,-2 9.49744098,-1.9667 9.43378195,-1.9121 L3.10305024,3.7879 C3.03939122,3.8422 3,3.9172 3,4 C3,4.0828 3.03939122,4.1575 3.10305024,4.2121 L9.43378195,9.9121 Z"
+                      transform="translate(6.517073, 4.000000) scale(1, -1) rotate(90.000000) translate(-6.517073, -4.000000) "></path>
+                  </svg></a>
+                <ul class="dropdown action">
+                  <li><a href="http://www.uktis.org/html/patient_confidentiality.html">Patient confidentiality</a></li>
+                  <li><a href="http://www.uktis.org/html/data_collection.html">Data Collection</a></li>
+                  <li><a href="http://www.uktis.org/html/reporting.html">Reporting an exposure</a></li>
+                </ul>
+              </li>
+
+              <li class="link_research"><a href="#">Resources<svg class="cheveron" width="14px" height="10px" viewBox="0 0 14 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                      d="M9.43378195,9.9121 C9.49744098,9.9664 9.5853678,10 9.68243902,10 C9.87693317,10 10.0341463,9.8659 10.0341463,9.7 C10.0341463,9.6172 9.99475512,9.5422 9.9310961,9.4879 L3.83600829,4 L9.9310961,-1.4879 C9.99475512,-1.5425 10.0341463,-1.6175 10.0341463,-1.7 C10.0341463,-1.8659 9.87693317,-2 9.68243902,-2 C9.5853678,-2 9.49744098,-1.9667 9.43378195,-1.9121 L3.10305024,3.7879 C3.03939122,3.8422 3,3.9172 3,4 C3,4.0828 3.03939122,4.1575 3.10305024,4.2121 L9.43378195,9.9121 Z"
+                      transform="translate(6.517073, 4.000000) scale(1, -1) rotate(90.000000) translate(-6.517073, -4.000000) "></path>
+                  </svg></a>
+                <ul class="dropdown research">
+                  <li><a href="http://www.uktis.org/html/maternal_exposure.html">Information for healthcare professionals</a></li>
+                  <li><a href="http://www.uktis.org/html/info_patients.html">Information leaflets for patients</a></li>
+                  <li><a href="http://www.uktis.org/html/promo_material.html">Promotional Material</a></li>
+                  <li><a href="http://www.uktis.org/html/scientific_publications.html">Publications</a></li>
+                  <li><a href="http://www.uktis.org/html/reporting_exposure.html">Report an exposure</a></li>
+                  <li><a href="http://www.uktis.org/html/gestational_calendars.html">Gestational calendar</a></li>
+                  <li><a href="http://www.uktis.org/html/links.html">Links</a></li>
+                </ul>
+              </li>
+
+              <li class="link_blogs"><a href="#">News & Blogs<svg class="cheveron" width="14px" height="10px" viewBox="0 0 14 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                      d="M9.43378195,9.9121 C9.49744098,9.9664 9.5853678,10 9.68243902,10 C9.87693317,10 10.0341463,9.8659 10.0341463,9.7 C10.0341463,9.6172 9.99475512,9.5422 9.9310961,9.4879 L3.83600829,4 L9.9310961,-1.4879 C9.99475512,-1.5425 10.0341463,-1.6175 10.0341463,-1.7 C10.0341463,-1.8659 9.87693317,-2 9.68243902,-2 C9.5853678,-2 9.49744098,-1.9667 9.43378195,-1.9121 L3.10305024,3.7879 C3.03939122,3.8422 3,3.9172 3,4 C3,4.0828 3.03939122,4.1575 3.10305024,4.2121 L9.43378195,9.9121 Z"
+                      transform="translate(6.517073, 4.000000) scale(1, -1) rotate(90.000000) translate(-6.517073, -4.000000) "></path>
+                  </svg></a>
+                <ul class="dropdown blogs">
+                  <li><a href="#">Latest news</a></li>
+                  <li><a href="https://www.medicinesinpregnancy.org/Blog/">Blog</a></li>
+                  <li><a href="#">Your stories</a></li>
+
+                </ul>
+              </li>
+            </ul>
+            <!-- Manifying Glass -->
+            <svg class="magnify" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+            </svg>
+            <a href="http://www.uktis.org/html/contact_us.html"> <button type="text" name="magnify" class="donate">Contact Us</button></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+<!----------------------------- Call to action headline --------------------------------------------------->
+    <main>
+      <div class="container">
+        <div class="headline">
+          <h1>Providing high quality information and advice in pregnancy.</h1>
+          <p>Allowing informed decision making, reducing maternal anxiety and working towards reducing the number of preventable congenital malformations and the unnecessary termination of otherwise wanted pregnancies.</p>
+
+          <a href="http://www.uktis.org/"> <button class="learn_button" type="text" name="top_right">Site Search</button></a>
+        </div>
+      </div>
+
+    </main>
+  </section>
+
+  <!-- .........................................................FIrst Cards Story Section................................................................      -->
+
+  <section class="cards">
+    <div class="row">
+
+      <article class="cell">
+        <img src="{% static 'uktis/images/image baby1.jpeg' %}" alt="">
+        <div class="cell_text">
+          <h4>Welcome to the Bumps Website</h4>
+          <p>This sister website provides reliable, evidence-based, and accurate information about use of medicines in pregnancy, in the form of freely available patient information leaflets called 'Bumps' ('Best Use of Medicines in Pregnancy'). </p>
+          <span> <a href="https://www.medicinesinpregnancy.org/" class="signup">Find more here</a>
+            <svg class="chev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </span>
+        </div>
+      </article>
+
+      <article class="cell">
+        <img src="{% static 'uktis/images/drug_packets.jpeg' %}" alt="">
+        <div class="cell_text">
+          <h4>Accessing UKTIS pregnancy information</h4>
+          <p>Access to our full pregnancy information documents on specific medications, chemicals and other exposures in pregnancy is available to health care professionals only at www.toxbase.org.</p>
+          <span> <a href="www.toxbase.org" class="signup">Explore here</a>
+            <svg class="chev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </span>
+        </div>
+      </article>
+
+      <article class="cell">
+        <img src="{% static 'uktis/images/covid.jpeg' %}" alt="">
+        <div class="cell_text">
+          <h4>Coronavirus(COVID-19)</h4>
+          <p>UKTIS have produced a review regarding the fetal and
+            neonatal risks of exposure to treatments which are being used to treat covid-19</p>
+          <span> <a href="https://www.medicinesinpregnancy.org/bumps/monographs/MEDICATIONS-USED-TO-TREAT-COVID-19-IN-PREGNANCY/" class="signup">More information here</a>
+            <svg class="chev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </span>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- .........................................................Current UK Research................................................................      -->
+  <section class="banner_image">
+    <div class="symptoms_banner">
+      <h1>Current Research</h1>
+      <p>The analysis and publication of surveillance data collected by UKTIS remains an essential
+        function of the service. Please click here to see our full list of publications.</p>
+      <a href="http://www.uktis.org/html/current_uktis_research.html"> <button class="more_button" type="button" name="ovarian">FIND OUT MORE</button></a>
+    </div>
+  </section>
+
+  <!-- .........................................................Reporting exposure in Pregnancy................................................................      -->
+  <section>
+    <div class="patient_hub">
+      <h1>Reporting exposure in pregnancy</h1>
+      <p>In order to provide the best possible information to inform an
+        individual risk assessment for a pregnant woman and her baby
+        following exposure to drugs or chemicals. For case specific advice please contact UKTIS on 0344 892 0909.</p>
+    </div>
+  </section>
+
+  <!-- .........................................................2nd cards  Story Section................................................................      -->
+
+  <section class="cards">
+    <div class="row">
+
+      <article class="cell">
+        <img src="{% static 'uktis/images/preg-wheel-3.jpeg' %}"  alt="">
+        <div class="cell_text">
+          <h4>UKTIS Gestational Calendars</h4>
+          <p>An UKTIS gestational calendar is available to NHS health care professionals, please contact the service administration line to request one.</p>
+          <span> <a href="http://www.uktis.org/html/gestational_calendars.html" class="signup">Find out more</a>
+            <svg class="chev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </span>
+        </div>
+      </article>
+
+      <article class="cell">
+        <img src="https://cdn.ovarian.org.uk/media/images/Doctor.2e16d0ba.fill-415x320.jpg" alt="">
+        <div class="cell_text">
+          <h4>UKTIS promotional material</h4>
+          <p>This material may be freely reproduced for education and not for profit purposes within the UK National Health Service.</p>
+          <span> <a href="http://www.uktis.org/html/promo_material.html" class="signup">Find out more</a>
+            <svg class="chev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </span>
+        </div>
+      </article>
+
+      <article class="cell">
+        <img src="https://cdn.ovarian.org.uk/media/images/Ovarian-cancer-treatment-3.2e16d0ba.fill-415x320.png" alt="">
+        <div class="cell_text">
+          <h4>Data Collection</h4>
+          <p>We are very grateful for the ongoing commitment and support of the health professionals who have provided UKTIS with outcome details of exposed pregnancies. </p>
+          <span> <a href="http://www.uktis.org/html/data_collection.html" class="signup">Find out more</a>
+            <svg class="chev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <!-- .........................................................DNA BACKGROUND BANNER SECTION................................................................      -->
+  <section>
+
+    <div class="image_container">
+      <div class="width_container">
+        <div class="wrapper">
+          <h2>NON LIVE COVID-19 VACCINES</h2>
+          <p>There are currently no proven fetal risks following gestational exposure to ‘non-live’ vaccines. It is therefore considered highly
+          unlikely that such vaccines would be harmful if administered in pregnancy. </p>
+          <p>However, for some of these vaccines, information regarding
+          the safety of administration in pregnancy is either limited or lacking.</p>
+          <a href="https://www.medicinesinpregnancy.org/bumps/monographs/USE-OF-NON-LIVE-VACCINES-IN-PREGNANCY/"> <button class="covid_button" type="text" name="covid_button">FIND OUT MORE</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- .......................................................Footer................................................................      -->
+  <footer>
+    <section>
+      <div class="foot">
+        <div class="footer_title">
+          <div class="stay_informed">
+            <h4>STAY INFORMED</h4>
+            <p>Subscribe to our e-newsletter to keep up to date with all the latest events and news with UK Teratology Information Service.</p>
+            <form id="newsletter-signup" class="email_input" method="post" action="">
+              <input type="text" placeholder="First name" name="newsletter-fname" id="newsletter-fname" class="">
+              <input type="text" placeholder="Last name" name="newsletter-lname" id="newsletter-lname">
+              <input type="email" placeholder="Email address" name="newsletter-email" id="newsletter-email">
+              <button class="btn btn_plum">Sign up</button>
+            </form>
+          </div>
+
+          <div class="wrapper_social">
+            <h4>FOLLOW US</h4>
+            <dl class="social_media_links">
+              <dd> <a href="#" class="social_link_facebook" target="_blank"></a> </dd>
+              <dd> <a href="#" class="social_link_twitter" target="_blank"></a> </dd>
+              <dd> <a href="#" class="social_link_instagram" target="_blank"></a> </dd>
+            </dl>
+          </div>
+        </div>
+
+        <section class="footer_info">
+          <div class="legal">
+            <div class="logo_oca_footer">
+              <a href="#"><img src= "{% static 'uktis/images/ukTIS_coloured_image.svg' %}" alt="logo_oca"></a>
+            </div>
+            <p>UK Teratology Information Service</p>
+            <p>Regional Drug & Therapeutics Centre</p>
+            <p>FREEPOST NEA1573</p>
+            <p>Newcastle upon Tyne</p>
+            <p>NE2 1BR</p>
+          </div>
+          <div class="regulator">
+            <a href="#"> <img src="https://www.dcmha.uk/wp-content/uploads/2021/05/1200px-PublicHealthEngland.svg-300x186.png" alt="">
+            </a>
+          </div>
+        </section>
+
+        <section class="footer_policy">
+          <div class="policy lhs_foot">
+            <h5>Privacy policy</h5>
+            <h5>Copyright Notice</h5>
+          </div>
+
+          <div class="policy rhs_foot">
+            <h5>Site Disclaimer</h5>
+            <h5>Annual Report</h5>
+          </div>
+        </section>
+
+        <section>
+
+          <ul class="footer_contact">
+            <li>Designed and built by UKTIS
+
+              <a href="" target="_blank" class="logo-ricardo"></a>
+            </li>
+            <li>
+                <svg version="1.1" id="Capa_1" class="phone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 viewBox="0 0 202.592 202.592" style="enable-background:new 0 0 202.592 202.592;" xml:space="preserve">
+                <g>
+                	<g>
+                		<path  d="M198.048,160.105l-31.286-31.29c-6.231-6.206-16.552-6.016-23.001,0.433l-15.761,15.761
+                			c-0.995-0.551-2.026-1.124-3.11-1.732c-9.953-5.515-23.577-13.074-37.914-27.421C72.599,101.48,65.03,87.834,59.5,77.874
+                			c-0.587-1.056-1.145-2.072-1.696-3.038l10.579-10.565l5.2-5.207c6.46-6.46,6.639-16.778,0.419-23.001L42.715,4.769
+                			c-6.216-6.216-16.541-6.027-23.001,0.433l-8.818,8.868l0.243,0.24c-2.956,3.772-5.429,8.124-7.265,12.816
+                			c-1.696,4.466-2.752,8.729-3.235,12.998c-4.13,34.25,11.52,65.55,53.994,108.028c58.711,58.707,106.027,54.273,108.067,54.055
+                			c4.449-0.53,8.707-1.593,13.038-3.275c4.652-1.818,9.001-4.284,12.769-7.233l0.193,0.168l8.933-8.747
+                			C204.079,176.661,204.265,166.343,198.048,160.105z M190.683,176.164l-3.937,3.93l-1.568,1.507
+                			c-2.469,2.387-6.743,5.74-12.984,8.181c-3.543,1.364-7.036,2.24-10.59,2.663c-0.447,0.043-44.95,3.84-100.029-51.235
+                			C14.743,94.38,7.238,67.395,10.384,41.259c0.394-3.464,1.263-6.95,2.652-10.593c2.462-6.277,5.812-10.547,8.181-13.02l5.443-5.497
+                			c2.623-2.63,6.714-2.831,9.112-0.433l31.286,31.286c2.394,2.401,2.205,6.492-0.422,9.13L45.507,73.24l1.95,3.282
+                			c1.084,1.829,2.23,3.879,3.454,6.106c5.812,10.482,13.764,24.83,29.121,40.173c15.317,15.325,29.644,23.27,40.094,29.067
+                			c2.258,1.249,4.32,2.398,6.17,3.5l3.289,1.95l21.115-21.122c2.634-2.623,6.739-2.817,9.137-0.426l31.272,31.279
+                			C193.5,169.446,193.31,173.537,190.683,176.164z"/>
+                	</g>
+                </g>
+                </svg>
+              0344 892 0909
+            </li>
+            <li>
+
+                <svg version="1.1" id="Layer_1" class="letter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                <g>
+                	<g>
+                		<path d="M461.913,83.478H50.087C22.467,83.478,0,105.974,0,133.565v244.87c0,27.622,22.498,50.087,50.087,50.087h411.826
+                			c27.578,0,50.087-22.453,50.087-50.087v-244.87C512,105.984,489.543,83.478,461.913,83.478z M460.563,116.87
+                			c-8.494,8.494-186.871,186.871-192.757,192.758c-6.527,6.526-17.085,6.526-23.612,0C238.303,303.735,59.927,125.36,51.437,116.87
+                			H460.563z M33.391,377.085V146.046l115.519,115.519L33.391,377.085z M62.567,395.13l109.954-109.954l48.061,48.061
+                			c19.526,19.528,51.304,19.529,70.834,0l48.061-48.061L449.432,395.13H62.567z M478.609,377.085L363.089,261.565l115.519-115.519
+                			V377.085z"/>
+                	</g>
+                </g>
+                </svg>
+                    <a href="#" class="email">contactUKTIS@nuth.nhs.uk</a>
+            </li>
+            <li><a href="" class="btn btn_leaflet"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="down_arrow"><path d="M21,14a1,1,0,0,0-1,1v4a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V15a1,1,0,0,0-2,0v4a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V15A1,1,0,0,0,21,14Zm-9.71,1.71a1,1,0,0,0,.33.21.94.94,0,0,0,.76,0,1,1,0,0,0,.33-.21l4-4a1,1,0,0,0-1.42-1.42L13,12.59V3a1,1,0,0,0-2,0v9.59l-2.29-2.3a1,1,0,1,0-1.42,1.42Z"/></svg>Leaflets</a></li>
+            <li><a href="" class="btn btn_media">Media centre</a></li>
+          </ul>
+        </section>
+
+    </section>
+
+
+    </div>
+    </section>
+
+
+  </footer>
+
+<!-- ---------------------------------------------------JavaScript------------------------------------------------------------------- -->
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+    window.addEventListener('scroll', function() {
+      let header = document.querySelector('nav');
+      let windowPosition = window.scrollY > 600;
+      header.classList.toggle('scrolling-active', windowPosition);
+    })
+  </script>
+</body>
+
+</html>
