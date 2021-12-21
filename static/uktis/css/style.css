@@ -632,7 +632,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 425px;
+  max-width: 425px;
   height: 340px;
   background: #FFFFFF;
   padding: 20px;
@@ -679,8 +679,13 @@
 
 @media screen and (max-width: 565px) {
 /* DNA background banner section, reset margin to auto move tile to centre */
+  .width_container {
+    width: 350px;
+  }
+
   .wrapper {
     margin: 0 auto;
+    height: 380px;
   }
 }
 
